@@ -4,7 +4,7 @@ import { ErrorPage } from "@@pages/error";
 import { lazy } from "react";
 import { LazyWrapper } from "@@elements/lazy";
 import { HomePage } from "@@pages/home";
-import { TfImageDetectionPage } from "@@pages/tf/image-detection";
+// import { TfImageDetectionPage } from "@@pages/tf/image-detection";
 // import { TfImageDetectionUnoptimizedPage } from "@@pages/tf/image-detection";
 
 export type Breadcrumb = {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "tf/image-detection",
-        element: <LazyWrapper children={<TfImageDetectionPage />} />,
+        element: <LazyWrapper children={<TfImageDetectionPageLazy />} />,
         handle: {
           crumb: () => "tf/image-detection",
         },
@@ -47,13 +47,13 @@ const router = createBrowserRouter([
       //     crumb: () => "tf/image-detection-u",
       //   },
       // },
-      {
-        path: "tf/image-detection",
-        element: <LazyWrapper children={<TfImageDetectionPageLazy />} />,
-        handle: {
-          crumb: () => "tf/image-detection",
-        },
-      },
+      // {
+      //   path: "tf/image-detection",
+      //   element: <LazyWrapper children={<TfImageDetectionPageLazy />} />,
+      //   handle: {
+      //     crumb: () => "tf/image-detection",
+      //   },
+      // },
       {
         path: "",
         Component: HomePage,
